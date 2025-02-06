@@ -9,5 +9,5 @@ npm install
 ```
 
 ```sh
- npm start
+npm start
 ```
