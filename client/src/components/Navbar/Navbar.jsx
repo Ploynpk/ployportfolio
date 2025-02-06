@@ -27,11 +27,11 @@ function Navbar() {
             Home
           </a>
           <a
-            href="#about"
-            className={activeLink === '#about' ? 'active' : ''}
-            onClick={(e) => handleLinkClick(e, '#about')}
+            href="#aboutme"
+            className={activeLink === '#aboutme' ? 'active' : ''}
+            onClick={(e) => handleLinkClick(e, '#aboutme')}
           >
-            About
+            About Me
           </a>
           <a
             href="#projects"

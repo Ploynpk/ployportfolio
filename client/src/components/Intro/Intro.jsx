@@ -15,7 +15,7 @@ function Intro() {
           Building Scalable <br />Solutions Through <br /><code>Code</code> and <code>Design.</code>      
         </h1>
         <p className="intro-summary">
-          As a full-stack software engineer, I specialize in building robust <br />and efficient web applications. I turn complex requirements into <br />seamless, user-friendly experiences.
+          <span style={{ fontWeight: 'bold', fontSize: '24px' }}>Hi, I'm Ploy! </span> Nice to meet you ヅ<br /> I am a full-stack software engineer, I specialize in building robust <br />and efficient web applications. I turn complex requirements into <br />seamless, user-friendly experiences.
         </p>
 
         {/* resume Button */}

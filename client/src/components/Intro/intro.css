@@ -128,6 +128,16 @@ a {
         flex: 1;
         max-width: 100%; 
     }
+
+    .resume-contact-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .contact {
+      font-size: 20px;
+    }
 }
 
 /* tablets and phones*/
@@ -166,8 +176,12 @@ a {
 
   .resume-contact-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
+  }
+
+  .contact {
+    font-size: 18px;
   }
 }
 
@@ -199,6 +213,12 @@ a {
   }
 
   .resume-contact-container {
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact {
+    font-size: 18px;
   }
 }

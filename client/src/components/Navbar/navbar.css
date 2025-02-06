@@ -14,10 +14,11 @@
 .navbar-right a {
     margin-right: 20px;
     text-decoration: none;
-    color: #6d462c;
+    color: #7b4f31;
     font-family: "Grandstander", serif;
     font-optical-sizing: auto;
     font-size: 22px;
+    font-weight: bold;
 }
   
 .navbar-mid img {
@@ -44,13 +45,13 @@ a > img:hover {
   
 a:hover {
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: bolder;
     color: #402d21;
 }
   
 /* active link styles */
 a.active {
-    font-weight: bold;
+    font-weight: bolder;
     text-decoration: underline;
     color: #402d21;
 }
@@ -62,21 +63,21 @@ a {
 /* media queries for responsiveness */
 
 /* 1400px */
-@media (max-width: 1470px) {
+@media (max-height: 1400px) {
     .navbar {
       padding: 10px 15px; 
     }
   
     .navbar-right {
-      margin-left: 50px; 
+      margin-left: 200px; 
     }
   
     .navbar-left {
-      margin-right: 100px; 
+      margin-right: 200px; 
     }
   
     .navbar-right a {
-      margin-right: 15px; 
+      margin-right: 20px; 
     }
   
     .navbar-left a {
@@ -85,14 +86,14 @@ a {
   
     .navbar-mid img {
         height: 120px;
-        margin-left: 20px;
+        /* margin-left: 20px; */
     }
   }
   
   /* phone and tablet */
   @media (max-width: 768px) {
     .navbar-right {
-      margin-left: 50;
+      margin-left: 50px;
     }
   
     .navbar-right a {
