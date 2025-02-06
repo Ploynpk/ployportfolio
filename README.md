@@ -2,7 +2,7 @@
 
 ![My Portfolio Demo](client/public/assests/home.png)
 
-## 🚀 On process
+## 🚀 On process...
 
 ```sh
 npm install
