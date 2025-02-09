@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 
 function Navbar() {
@@ -9,14 +9,9 @@ function Navbar() {
     setActiveLink(section);
   };
 
-  // highlight active section on page load
-  useEffect(() => {
-    const currentPath = window.location.hash; 
-    setActiveLink(currentPath);
-  }, []);
-
   return (
     <nav className="navbar">
+      {/* left navbar (not right) */}
       <div className="navbar-right">
         <p>
           <a
@@ -31,7 +26,7 @@ function Navbar() {
             className={activeLink === '#aboutme' ? 'active' : ''}
             onClick={(e) => handleLinkClick(e, '#aboutme')}
           >
-            About Me
+            About
           </a>
           <a
             href="#projects"
@@ -54,41 +49,62 @@ function Navbar() {
         <img src="/favicon.ico" alt="Logo" />
       </div>
 
+    {/* right navbar (not left) */}
       <div className="navbar-left">
-        <a
-          href="https://www.linkedin.com/in/ploynapa-py/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            aria-hidden
-            src="/assests/lnl.png"
-            alt="LinkedIn"
-            height={35}
-          />
-        </a>
+  <a
+    href="https://www.linkedin.com/in/ploynapa-py/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="tooltip-container"  > 
+    <img
+      aria-hidden
+      src="/assests/lnl.png"
+      alt="LinkedIn"
+      id="github"
+    />
+    <span className="tooltip">LinkedIn</span> 
+  </a>
 
-        <a
-          href="https://github.com/Ploynpk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            aria-hidden
-            src="/assests/i.png"
-            alt="GitHub"
-            id="github"
-          />
-        </a>
+  <a
+    href="https://github.com/Ploynpk"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="tooltip-container"  > 
+    <img
+      aria-hidden
+      src="/assests/i.png"
+      alt="GitHub"
+      id="github"
+    />
+    <span className="tooltip">GitHub</span>
+  </a>
 
-        <a href="mailto:ploy@ploynapa.com" rel="noopener noreferrer">
-          <img
-            aria-hidden="true"
-            src="/assests/mr.png"
-            alt="Contact Me"
-            id="github"
-          />
-        </a>
+  <a 
+    href="assests/PloynapaYang(Resume)-2025.pdf" 
+    rel="noopener noreferrer"
+    className="tooltip-container"  > 
+    <img
+      aria-hidden="true"
+      src="/assests/rebtn.png"
+      alt="Resume"
+      id="github"
+    />
+    <span className="tooltip">Resume</span>
+  </a>
+
+  <a 
+    href="mailto:ploy@ploynapa.com" 
+    rel="noopener noreferrer"
+    className="tooltip-container"  > 
+    <img
+      aria-hidden="true"
+      src="/assests/mr.png"
+      alt="Contact Me"
+      id="github"
+    />
+    <span className="tooltip">Contact Me</span>
+  </a>
+
       </div>
     </nav>
   );
