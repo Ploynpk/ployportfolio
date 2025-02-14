@@ -49,62 +49,68 @@ function Navbar() {
         <img src="/favicon.ico" alt="Logo" />
       </div>
 
-    {/* right navbar (not left) */}
+      {/* right navbar (not left) */}
       <div className="navbar-left">
-  <a
-    href="https://www.linkedin.com/in/ploynapa-py/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="tooltip-container"  > 
-    <img
-      aria-hidden
-      src="/assests/lnl.png"
-      alt="LinkedIn"
-      id="github"
-    />
-    <span className="tooltip">LinkedIn</span> 
-  </a>
+        <a
+          href="https://www.linkedin.com/in/ploynapa-py/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="tooltip-container"
+        >
+          <img
+            aria-hidden
+            src="/assests/lnl.png"
+            alt="LinkedIn"
+            // id="github"
+            width={40}
+          />
+          <span className="tooltip">LinkedIn</span>
+        </a>
 
-  <a
-    href="https://github.com/Ploynpk"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="tooltip-container"  > 
-    <img
-      aria-hidden
-      src="/assests/i.png"
-      alt="GitHub"
-      id="github"
-    />
-    <span className="tooltip">GitHub</span>
-  </a>
+        <a
+          href="https://github.com/Ploynpk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="tooltip-container"
+        >
+          <img
+            aria-hidden
+            src="/assests/github.png"
+            alt="GitHub"
+            // id="github"
+            width={40}
+          />
+          <span className="tooltip">GitHub</span>
+        </a>
 
-  <a 
-    href="assests/PloynapaYang(Resume)-2025.pdf" 
-    rel="noopener noreferrer"
-    className="tooltip-container"  > 
-    <img
-      aria-hidden="true"
-      src="/assests/rebtn.png"
-      alt="Resume"
-      id="github"
-    />
-    <span className="tooltip">Resume</span>
-  </a>
+        <a
+          href="assests/PloynapaYang(Resume)-2025.pdf"
+          rel="noopener noreferrer"
+          className="tooltip-container"
+        >
+          <img
+            aria-hidden="true"
+            src="/assests/docs.png"
+            alt="Resume"
+            // id="github"
+            width={38}
+          />
+          <span className="tooltip">Resume</span>
+        </a>
 
-  <a 
-    href="mailto:ploy@ploynapa.com" 
-    rel="noopener noreferrer"
-    className="tooltip-container"  > 
-    <img
-      aria-hidden="true"
-      src="/assests/mr.png"
-      alt="Contact Me"
-      id="github"
-    />
-    <span className="tooltip">Contact Me</span>
-  </a>
-
+        <a
+          href="mailto:ploy@ploynapa.com"
+          rel="noopener noreferrer"
+          className="tooltip-container"
+        >
+          <img
+            aria-hidden="true"
+            src="/assests/mb1.png"
+            alt="Contact Me"
+            id="github1"
+          />
+          <span className="tooltip">Contact Me</span>
+        </a>
       </div>
     </nav>
   );

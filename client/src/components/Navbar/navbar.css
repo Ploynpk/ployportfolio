@@ -1,69 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-  
-.navbar-right {
-    margin-left: 300px;
-}
-  
-.navbar-right a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #7b4f31;
-    font-family: "Grandstander", serif;
-    font-optical-sizing: auto;
-    font-size: 22px;
-    font-weight: bold;
-}
-  
-.navbar-mid img {
-    height: 160px;
-}
-  
-.navbar-left a {
-    margin-left: 25px;
-}
-  
-.navbar-left {
-    margin-right: 300px;
-    margin-left: 120px;;
-}
-  
-a > img:hover {
-    box-shadow: 0px 4px 30px rgba(45, 42, 6, 0.793);
-    transition: box-shadow 0.3s ease-in-out;
-}
-  
-#github {
-    border-radius: 50%;
-    height: 40px;
-}
-  
-a:hover {
-    text-decoration: underline;
-    font-weight: bolder;
-    color: #402d21;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
+/* Navbar กลาง */
+.navbar-mid img {
+  height: 140px;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Navbar ขวา */
+.navbar-right {
+  background-color: rgba(240, 240, 239, 0.195);
+  padding: 5px 30px;
+  border-radius: 50px;
+  padding-left: 45px;
+}
+
+.navbar-right a,
+.navbar-left a {
+  text-decoration: none;
+  color: #02152b;
+  font-family: 'Grandstander', serif;
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+/* GitHub Icon */
+#github,
+#github1 {
+  border-radius: 50%;
+  height: 40px;
+}
+
+/* Hover Effect */
+a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+  color: #520f63;
+}
+
+/* Active Link */
 a.active {
-    font-weight: bolder;
-    text-decoration: underline;
-    color: #402d21;
+  font-weight: bolder;
+  text-decoration: underline;
+  color: #09303e;
 }
-  
-a {
-    text-decoration: none;
-}
-  
+
+/* Tooltip */
 .tooltip {
   visibility: hidden;
-  background-color: #3333331e;
-  color: #151414;
+  background-color: rgba(240, 240, 239, 0.315);
+  color: #000;
   text-align: center;
   padding: 5px 10px;
   border-radius: 5px;
@@ -78,110 +78,90 @@ a {
   font-weight: 400;
 }
 
-/* media queries for responsiveness */
-
-/* 1400px */
-@media (max-height: 1400px) {
-    .navbar {
-      padding: 10px 15px; 
-    }
-  
-    .navbar-right {
-      margin-left: 300px; 
-    }
-  
-    .navbar-left {
-      margin-right: 300px; 
-    }
-  
-    .navbar-right a {
-      margin-right: 20px; 
-    }
-  
-    .navbar-mid img {
-        height: 120px;
-        /* margin-left: 20px; */
-    }
+/* Responsive Design */
+/* Laptop (MacBook 14-16") */
+@media screen and (max-width: 1440px) {
+  .navbar {
+    max-width: 1200px;
+    padding: 10px 3%;
   }
-  
-  @media (max-width: 1300px) {
-    .navbar {
-      padding: 10px 15px; 
-    }
-  
-    .navbar-right {
-      margin-left: 150px; 
-    }
-  
-    .navbar-left {
-      margin-right: 150px; 
-    }
+  .navbar-mid img {
+    height: 120px;
+  }
+  .navbar-right a,
+  .navbar-left a {
+    font-size: 18px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding-right: 10px;
+    position: relative;
   }
 
-
-  /* phone and tablet */
-  @media (max-width: 1200px) {
-    .navbar-right {
-      margin-left: 140px;
-    }
-  
-    .navbar-left {
-      margin-right: 140px;
-    }
-    .navbar-mid img {
-        height: 100px;
-        margin-left: 20px;
-    }
-    .navbar-right a {
-      margin-right: 20px; 
-    }
+  .navbar-mid {
+    order: -1;
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
-
-  @media (max-width: 1150px) {
-    .navbar-right {
-      margin-left: 120px;
-    }
-  
-    .navbar-left {
-      margin-right: 120px;
-    }
-    .navbar-right a {
-      margin-right: 20px; 
-    }
+  .navbar-mid img {
+    height: 100px;
   }
-  
-  @media (max-width: 900px) {
-    .navbar-right p {
-      margin-left: -10px;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .navbar-left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-left: 80px;
-      margin-top: 10px;
-    }
-    .navbar-mid img {
-        height: 100px;
-        margin-left: 20px;
-    }
-    .navbar-right a {
-      margin-right: 18px; 
-    }
+  .navbar-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+  .navbar-right {
+    margin: 0 auto;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding-right: 10px;
+    position: relative;
   }
 
-  /* phones in portrait mode */
-  @media (max-width: 480px) {
-    .navbar-right a {
-      font-size: 0.875rem;
-    }
-    .navbar-mid img {
-        height: 80px;
-        margin-left: 10px;
-    }
+  .navbar-mid {
+    order: -1;
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
-  
+
+  .navbar-mid img {
+    height: 80px;
+  }
+
+  .navbar-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+
+  .navbar-right {
+    margin: 0 auto;
+    margin-left: -15px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}
