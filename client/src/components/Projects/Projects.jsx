@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 import './project.css';
 
+// Import images
+import payProHome from '../../assets/images/payprohome.png';
+import pa1 from '../../assets/images/pa1.png';
+import pa2 from '../../assets/images/pa2.png';
+import pa from '../../assets/images/pa.png';
+import payProLogo from '../../assets/images/payprologo.png';
+import p2 from '../../assets/images/p2.png';
+import p3 from '../../assets/images/p3.png';
+import petderLogo from '../../assets/images/petderlogo.png';
+import lunch from '../../assets/images/luch.png';
+import l from '../../assets/images/l.png';
+import dashboardGif from '../../assets/images/dashboard.gif';
+import j from '../../assets/images/j.png';
+import j1 from '../../assets/images/j1.png';
+import j3 from '../../assets/images/j3.png';
+import nextFlickLogo from '../../assets/images/nextflick-logo.png';
+import luckyDogLogo from '../../assets/images/luckydog-logo.png';
+import githubLogo from '../../assets/images/github.png';
+
 const projectDetails = {
   PayPro:
     'A group financial management web application specifically designed to manage and track shared expenses.',
@@ -17,23 +36,13 @@ const projectDetails = {
 };
 
 const projectImages = {
-  PayPro: [
-    '/assests/payprohome.png',
-    '/assests/pa1.png',
-    '/assests/pa2.png',
-    '/assests/pa.png',
-    '/assests/payprologo.png',
-  ],
-  'Petder Better': [
-    '/assests/p2.png',
-    '/assests/p3.png',
-    '/assests/petderlogo.png',
-  ],
-  LunchBox: ['/assests/luch.png', '/assests/l.png'],
-  DeClustor: ['/assests/dashboard.gif'],
-  JigglyDex: ['/assests/j.png', '/assests/j1.png', '/assests/j3.png'],
-  NextFlick: ['/assests/nextflick-logo.png'],
-  'Lucky Dog': ['/assests/luckydog-logo.png'],
+  PayPro: [payProHome, pa1, pa2, pa, payProLogo],
+  'Petder Better': [p2, p3, petderLogo],
+  LunchBox: [lunch, l],
+  DeClustor: [dashboardGif],
+  JigglyDex: [j, j1, j3],
+  NextFlick: [nextFlickLogo],
+  'Lucky Dog': [luckyDogLogo],
 };
 
 const projectLinks = {
@@ -72,6 +81,9 @@ const techUsed = {
     'RESTAPIs',
     'MongoDB',
     'Webpack',
+    'React Testing Library',
+    'SuperTest',
+    'Jest'
   ],
   DeClustor: [
     'JavaScript',
@@ -88,6 +100,9 @@ const techUsed = {
     'Redis',
     'CI/CD',
     'AWS',
+    'React Testing Library',
+    'SuperTest',
+    'Jest'
   ],
   JigglyDex: [
     'JavaScript',
@@ -141,9 +156,7 @@ function Projects() {
       </div>
 
       {/* Project Details */}
-      <div
-        className={`project-detail ${selectedProject ? 'active-project' : ''}`}
-      >
+      <div className={`project-detail ${selectedProject ? 'active-project' : ''}`}>
         {/* project images */}
         {images.length > 0 && (
           <div className="carousel">
@@ -171,14 +184,13 @@ function Projects() {
         </ul>
 
         {/* link button */}
-
         <a
           href={projectLinks[selectedProject]}
           target="_blank"
           rel="noopener noreferrer"
           className="tooltip-container"
         >
-          <img aria-hidden src="/assests/github.png" alt="GitHub" id="github" />
+          <img aria-hidden src={githubLogo} alt="GitHub" id="github" />
         </a>
       </div>
     </div>

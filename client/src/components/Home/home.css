@@ -242,7 +242,7 @@ a {
   }
 
   .intro-container {
-    padding: 10px;
+    padding: 0;
   }
 
   .intro-top {
@@ -250,7 +250,7 @@ a {
   }
 
   .intro-summary {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .resume button {

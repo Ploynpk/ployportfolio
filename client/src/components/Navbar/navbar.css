@@ -7,6 +7,8 @@
   padding: 10px 5%;
   max-width: 1300px;
   margin: 0 auto;
+  z-index: 100;
+  position: fixed;
 }
 
 /* Navbar กลาง */
@@ -92,6 +94,9 @@ a.active {
   .navbar-left a {
     font-size: 18px;
   }
+  .navbar-right {
+    margin: 0 auto;
+  }
 }
 
 /* Tablet */
@@ -140,11 +145,12 @@ a.active {
     order: -1;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 30px;
+    /* left: 10px; */
   }
 
   .navbar-mid img {
-    height: 80px;
+    height: 60px;
   }
 
   .navbar-left {
@@ -159,9 +165,24 @@ a.active {
   .navbar-right {
     margin: 0 auto;
     margin-left: -15px;
+    font-size: 10px;
+    width: auto;
+    padding: 8px 30px;
+    margin-top: 20px;
   }
+
+  .navbar-right p{
+    font-size: 4px;
+  }
+
 
   .tooltip {
     display: none;
+  }
+
+  .navbar-left img {
+    height: 28px;
+    width: 30px;
+    margin-right: -20px;
   }
 }

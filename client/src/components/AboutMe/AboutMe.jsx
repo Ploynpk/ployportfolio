@@ -1,38 +1,45 @@
 import React, { useEffect, useRef } from 'react';
 import './aboutme.css';
+import AWS from '../../assets/images/AWS.svg';
+import Cloudflare from '../../assets/images/Cloudflare.svg';
+import RasberryPi from '../../assets/images/RasberryPi.svg';
+import HTML5 from '../../assets/images/HTML5.svg';
+import CSS from '../../assets/images/CSS.svg';
+import JavaScript from '../../assets/images/JavaScript.svg';
+import TypeScript from '../../assets/images/TypeScript.svg';
+import Python from '../../assets/images/Python.svg';
+import ReactLogo from '../../assets/images/React.png';
+import MaterialUI from '../../assets/images/MaterialUI.svg';
+import Git from '../../assets/images/Git.svg';
+import GitHub from '../../assets/images/GitHub.svg';
+import JQuery from '../../assets/images/JQuery.svg';
+import NodeJS from '../../assets/images/NodeJS.svg';
+import Express from '../../assets/images/Express.svg';
+import MongoDB from '../../assets/images/MongoDB.svg';
+import PostgreSQL from '../../assets/images/PostgreSQL.png';
+import Docker from '../../assets/images/Docker.png';
+import Websocket from '../../assets/images/Websocket.png';
+import RabbitMQ from '../../assets/images/RabbitMQ.svg';
+import CICD from '../../assets/images/CICD.png';
+import Redis from '../../assets/images/Redis.svg';
+import Redux from '../../assets/images/Redux.svg';
+import SQLite from '../../assets/images/SQLite.svg';
+import Postman from '../../assets/images/Postman.png';
+import Supabase from '../../assets/images/Supabase.svg';
+import Jest from '../../assets/images/Jest.svg';
+import Jira from '../../assets/images/Jira.png';
+import Vite from '../../assets/images/Vite.svg';
+import Webpack from '../../assets/images/Webpack.svg';
+import PloyPic from '../../assets/images/ploy4.png';
+
+
 
 function AboutMe() {
   const techSkills = [
-    '/assests/AWS.svg',
-    '/assests/Cloudflare.svg',
-    '/assests/RasberryPi.svg',
-    '/assests/HTML5.svg',
-    '/assests/CSS.svg',
-    '/assests/JavaScript.svg',
-    '/assests/TypeScript.svg',
-    '/assests/Python.svg',
-    '/assests/React.png',
-    '/assests/MaterialUI.svg',
-    '/assests/Git.svg',
-    '/assests/GitHub.svg',
-    '/assests/JQuery.svg',
-    '/assests/NodeJS.svg',
-    '/assests/Express.svg',
-    '/assests/MongoDB.svg',
-    '/assests/PostgreSQL.png',
-    '/assests/Docker.png',
-    '/assests/Websocket.png',
-    '/assests/RabbitMQ.svg',
-    '/assests/CICD.png',
-    '/assests/Redis.svg',
-    '/assests/Redux.svg',
-    '/assests/SQLite.svg',
-    '/assests/Postman.png',
-    '/assests/Supabase.svg',
-    '/assests/Jest.svg',
-    '/assests/Jira.png',
-    '/assests/Vite.svg',
-    '/assests/Webpack.svg',
+    AWS, Cloudflare, RasberryPi, HTML5, CSS, JavaScript, TypeScript, Python, 
+    ReactLogo, MaterialUI, Git, GitHub, JQuery, NodeJS, Express, MongoDB, 
+    PostgreSQL, Docker, Websocket, RabbitMQ, CICD, Redis, Redux, SQLite, 
+    Postman, Supabase, Jest, Jira, Vite, Webpack
   ];
 
   const experiencesRef = useRef(null);
@@ -45,7 +52,7 @@ function AboutMe() {
             // Add the "animate" class to all experience items
             const items = entry.target.querySelectorAll('.experience-item');
             items.forEach((item, index) => {
-              setTimeout(() => item.classList.add('animate'), index * 200); // Staggered delay
+              setTimeout(() => item.classList.add('animate'), index * 200); 
             });
           }
         });
@@ -65,7 +72,7 @@ function AboutMe() {
     <div>
       <div className="aboutme-wrapper">
         {/* Left intro */}
-        <img src="/assests/ploy4.png" alt="ploypic" className="mypic" />
+        <img src={PloyPic} alt="ploypic" className="mypic" />
 
         {/* About me */}
         <div className="aboutme-container">

@@ -1,15 +1,23 @@
 import React from 'react';
 import './home.css';
+import profileImage from "../../assets/images/me.png"
+import arrow from "../../assets/images/a.png"
+import resume from "../../assets/images/PloynapaYang(Resume)-2025.pdf";
 
 function Intro() {
+  
+  // const openEmail =() => {
+  //   window.location.href = "mailto:ploy@ploynapa.com?subject=Hi Ploy, I would like to contact you!";
+  // }
+
   return (
     <>
       <div className="intro-container">
         <div className="intro-left">
           {/* profile image */}
           <img
-            src="/assests/me.png"
-            alt="Your Name"
+            src={profileImage}
+            alt="profile-image"
             className="profile-image"
           />
         </div>
@@ -31,11 +39,11 @@ function Intro() {
 
           {/* resume and contact container */}
           <div className="resume-contact-container">
-            <a href="assests/PloynapaYang(Resume)-2025.pdf" className="resume">
+            <a href={resume} className="resume">
               <button>
                 Resume
                 <img
-                  src="/assests/a.png"
+                  src={arrow}
                   alt="Arrow Icon"
                   className="resume-arrow"
                 />
@@ -43,7 +51,7 @@ function Intro() {
             </a>
 
             {/* contact link */}
-            <a href="mailto:ploy@ploynapa.com" className="contact">
+            <a href='mailto:ploy@ploynapa.com' className="contact">
               Contact
             </a>
           </div>

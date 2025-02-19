@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,6 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
+    assetModuleFilename: 'images/[name][ext]',
   },
   module: {
     rules: [
@@ -29,6 +31,14 @@ module.exports = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource', 
+      },
+      {
+        test: /\.pdf$/,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {
@@ -40,6 +50,11 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets/images', to: 'images' }, 
+      ],
     }),
   ],
   devServer: {

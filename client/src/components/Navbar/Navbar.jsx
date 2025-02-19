@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import './navbar.css';
+import linkedinIcon from "../../assets/images/lnl.png";
+import githubIcon from "../../assets/images/github.png";
+import resumeIcon from "../../assets/images/docs.png";
+import contactIcon from "../../assets/images/mb1.png";
+import logo from "../../assets/images/logo.png";
+import resume from "../../assets/images/PloynapaYang(Resume)-2025.pdf";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('');
@@ -46,7 +52,7 @@ function Navbar() {
       </div>
 
       <div className="navbar-mid">
-        <img src="/favicon.ico" alt="Logo" />
+        <img src={logo} alt="Logo" style={{borderRadius: '50%'}}/>
       </div>
 
       {/* right navbar (not left) */}
@@ -59,7 +65,7 @@ function Navbar() {
         >
           <img
             aria-hidden
-            src="/assests/lnl.png"
+            src={linkedinIcon}
             alt="LinkedIn"
             // id="github"
             width={40}
@@ -75,7 +81,7 @@ function Navbar() {
         >
           <img
             aria-hidden
-            src="/assests/github.png"
+            src={githubIcon}
             alt="GitHub"
             // id="github"
             width={40}
@@ -84,13 +90,13 @@ function Navbar() {
         </a>
 
         <a
-          href="assests/PloynapaYang(Resume)-2025.pdf"
+          href={resume}
           rel="noopener noreferrer"
           className="tooltip-container"
         >
           <img
             aria-hidden="true"
-            src="/assests/docs.png"
+            src={resumeIcon}
             alt="Resume"
             // id="github"
             width={38}
@@ -105,7 +111,7 @@ function Navbar() {
         >
           <img
             aria-hidden="true"
-            src="/assests/mb1.png"
+            src={contactIcon}
             alt="Contact Me"
             id="github1"
           />
