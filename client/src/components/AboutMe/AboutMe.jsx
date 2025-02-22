@@ -32,14 +32,38 @@ import Vite from '../../assets/images/Vite.svg';
 import Webpack from '../../assets/images/Webpack.svg';
 import PloyPic from '../../assets/images/ploy4.png';
 
-
-
 function AboutMe() {
   const techSkills = [
-    AWS, Cloudflare, RasberryPi, HTML5, CSS, JavaScript, TypeScript, Python, 
-    ReactLogo, MaterialUI, Git, GitHub, JQuery, NodeJS, Express, MongoDB, 
-    PostgreSQL, Docker, Websocket, RabbitMQ, CICD, Redis, Redux, SQLite, 
-    Postman, Supabase, Jest, Jira, Vite, Webpack
+    AWS,
+    Cloudflare,
+    RasberryPi,
+    HTML5,
+    CSS,
+    JavaScript,
+    TypeScript,
+    Python,
+    ReactLogo,
+    MaterialUI,
+    Git,
+    GitHub,
+    JQuery,
+    NodeJS,
+    Express,
+    MongoDB,
+    PostgreSQL,
+    Docker,
+    Websocket,
+    RabbitMQ,
+    CICD,
+    Redis,
+    Redux,
+    SQLite,
+    Postman,
+    Supabase,
+    Jest,
+    Jira,
+    Vite,
+    Webpack,
   ];
 
   const experiencesRef = useRef(null);
@@ -52,7 +76,7 @@ function AboutMe() {
             // Add the "animate" class to all experience items
             const items = entry.target.querySelectorAll('.experience-item');
             items.forEach((item, index) => {
-              setTimeout(() => item.classList.add('animate'), index * 200); 
+              setTimeout(() => item.classList.add('animate'), index * 200);
             });
           }
         });
@@ -77,12 +101,14 @@ function AboutMe() {
         {/* About me */}
         <div className="aboutme-container">
           <div className="aboutme-header">
-            <h1>I'm Ploy.</h1>
+            <h1>I am Ploy.</h1>
           </div>
           <h2>
-            I'm a software engineer. I enjoy tackling complex problems. My main
-            focus is on JavaScript/TypeScript, React, Node.js, and I also
-            specialize in both NoSQL and SQL databases.
+            <span id="i">I</span> am a software engineer passionate about
+            creating seamless experiences across the entire development stack.{' '}
+            <br />
+            <span id="i">I</span> enjoy solving complex problems and building
+            high-quality, user-centric solutions.
           </h2>
           <p>
             Outside of work, I enjoy outdoor runs as a form of meditation,
@@ -95,7 +121,7 @@ function AboutMe() {
             Growing up in Thailand taught me the value of adaptability and
             collaboration, which I bring to every team I work with.
           </p>
-          <p>
+          <p style={{ fontStyle: 'italic' }}>
             <br />
             "I am a hard worker who stays determined and persistent until I
             achieve my goals."
@@ -107,56 +133,56 @@ function AboutMe() {
           <h1 id="ex-header">MY EXPERIENCES.</h1>
           <div className="experience-item current">
             <div>
-              <h1>OSLabs | DeClustor</h1>
-              <p>Software Engineer</p>
+              <h1>Software Engineer</h1>
+              <p>OSLabs | DeClustor</p>
             </div>
             <h1 className="year">2024~</h1>
           </div>
 
           <div className="experience-item">
             <div>
-              <h1>Petder Better</h1>
-              <p>Software Engineer</p>
+              <h1>Software Engineer</h1>
+              <p>Petder Better</p>
             </div>
             <h1 className="year">2024</h1>
           </div>
 
           <div className="experience-item">
             <div>
-              <h1>LunchBox</h1>
-              <p>Software Engineer</p>
+              <h1>Software Engineer</h1>
+              <p>LunchBox</p>
             </div>
             <h1 className="year">2024</h1>
           </div>
 
           <div className="experience-item">
             <div>
-              <h1>Jumpa Co-op</h1>
-              <p>Shift Lead/Hospitality Specialist</p>
+              <h1>Shift Lead/Hospitality Specialist</h1>
+              <p>Jumpa Co-op</p>
             </div>
             <h1 className="year">2018-2023</h1>
           </div>
 
           <div className="experience-item">
             <div>
-              <h1>Jumpa Co-op</h1>
-              <p>Product Manager (Intern)</p>
+              <h1>Product Manager (Intern)</h1>
+              <p>Jumpa Co-op</p>
             </div>
             <h1 className="year">2017-2018</h1>
           </div>
 
           <div className="experience-item">
             <div>
-              <h1>Mitr Phol Group</h1>
-              <p>Export and Logistic Operator</p>
+              <h1>Export and Logistic Operator</h1>
+              <p>Mitr Phol Group</p>
             </div>
             <h1 className="year">2013-2015</h1>
           </div>
 
           <div className="experience-item">
             <div>
-              <h1>Mitr Phol Group</h1>
-              <p>Procurement Officer</p>
+              <h1>Procurement Officer (Intern)</h1>
+              <p>Mitr Phol Group</p>
             </div>
             <h1 className="year">2012-2013</h1>
           </div>

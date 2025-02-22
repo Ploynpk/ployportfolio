@@ -20,6 +20,10 @@
 .navbar-right {
   display: flex;
   align-items: center;
+  /* gap: 15px; */
+}
+
+.navbar-left {
   gap: 15px;
 }
 
@@ -145,7 +149,7 @@ a.active {
     order: -1;
     position: absolute;
     right: 10px;
-    top: 30px;
+    top: 60px;
     /* left: 10px; */
   }
 
@@ -158,23 +162,22 @@ a.active {
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
-    margin-top: 2%;
+    margin-top: 6%;
     margin-left: 5%;
   }
 
   .navbar-right {
     margin: 0 auto;
-    margin-left: -15px;
+    /* margin-left: -15px; */
     font-size: 10px;
     width: auto;
-    padding: 8px 30px;
+    padding: 15px 20px;
     margin-top: 20px;
   }
 
-  .navbar-right p{
+  .navbar-right p {
     font-size: 4px;
   }
-
 
   .tooltip {
     display: none;

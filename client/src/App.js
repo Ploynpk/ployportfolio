@@ -22,7 +22,7 @@ function App() {
         <HomePage />
       </div>
 
-      <div id="aboutme" className="section">
+      <div id="about" className="section">
         <AboutMe />
       </div>
 
@@ -30,7 +30,7 @@ function App() {
         <Projects />
       </div>
 
-      <div id="chat" className="section">
+      <div id="ploybot" className="section">
         <ChatPage />
       </div>
     </div>

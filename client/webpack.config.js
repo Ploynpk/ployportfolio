@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        type: 'asset/resource', 
+        type: 'asset/resource',
       },
       {
         test: /\.pdf$/,
@@ -52,9 +52,7 @@ module.exports = {
       template: './public/index.html',
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/assets/images', to: 'images' }, 
-      ],
+      patterns: [{ from: 'src/assets/images', to: 'images' }],
     }),
   ],
   devServer: {

@@ -12,10 +12,14 @@ import p3 from '../../assets/images/p3.png';
 import petderLogo from '../../assets/images/petderlogo.png';
 import lunch from '../../assets/images/luch.png';
 import l from '../../assets/images/l.png';
-import dashboardGif from '../../assets/images/dashboard.gif';
+import dashboardGif from '../../assets/images/dash3.gif';
+import dashboardGif2 from '../../assets/images/dash.gif';
+import dashboardGif3 from '../../assets/images/dash1.gif';
+import dashboardGif4 from '../../assets/images/dash2.gif';
 import j from '../../assets/images/j.png';
 import j1 from '../../assets/images/j1.png';
 import j3 from '../../assets/images/j3.png';
+import j4 from '../../assets/images/jj.gif';
 import nextFlickLogo from '../../assets/images/nextflick-logo.png';
 import luckyDogLogo from '../../assets/images/luckydog-logo.png';
 import githubLogo from '../../assets/images/github.png';
@@ -39,8 +43,8 @@ const projectImages = {
   PayPro: [payProHome, pa1, pa2, pa, payProLogo],
   'Petder Better': [p2, p3, petderLogo],
   LunchBox: [lunch, l],
-  DeClustor: [dashboardGif],
-  JigglyDex: [j, j1, j3],
+  DeClustor: [dashboardGif, dashboardGif2, dashboardGif3, dashboardGif4],
+  JigglyDex: [j4, j1, j3, j],
   NextFlick: [nextFlickLogo],
   'Lucky Dog': [luckyDogLogo],
 };
@@ -83,7 +87,7 @@ const techUsed = {
     'Webpack',
     'React Testing Library',
     'SuperTest',
-    'Jest'
+    'Jest',
   ],
   DeClustor: [
     'JavaScript',
@@ -102,7 +106,7 @@ const techUsed = {
     'AWS',
     'React Testing Library',
     'SuperTest',
-    'Jest'
+    'Jest',
   ],
   JigglyDex: [
     'JavaScript',
@@ -156,7 +160,9 @@ function Projects() {
       </div>
 
       {/* Project Details */}
-      <div className={`project-detail ${selectedProject ? 'active-project' : ''}`}>
+      <div
+        className={`project-detail ${selectedProject ? 'active-project' : ''}`}
+      >
         {/* project images */}
         {images.length > 0 && (
           <div className="carousel">
