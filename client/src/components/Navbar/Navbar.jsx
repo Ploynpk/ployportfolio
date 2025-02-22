@@ -51,6 +51,12 @@ function Navbar() {
               key={section}
               href={`#${section}`}
               className={activeLink === `#${section}` ? 'active' : ''}
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById(section)
+                  .scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               {section === 'ploybot'
                 ? 'PloyBot'
