@@ -4,7 +4,16 @@
 .hidden {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.navbar-left:not(.hidden),
+.navbar-mid:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-in, transform 0.8s ease-in, visibility 0s;
 }
 
 
