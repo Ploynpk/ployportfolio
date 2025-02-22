@@ -122,10 +122,10 @@
 .experience-item p {
   margin: 0;
   color: #333;
+  font-size: 0.9rem;
 }
 
 .year {
-  font-size: 1.5rem !important;
   font-weight: bold;
   color: #471268;
   font-family: 'Caveat', serif;
@@ -135,6 +135,7 @@
 
 h1.year {
   width: 40px;
+  font-size: 1.5rem;
 }
 
 .experience-item:hover {
@@ -392,7 +393,7 @@ h1.year {
     padding: 0;
   }
   .aboutme-container h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     margin: 0 auto;
   }
@@ -400,6 +401,10 @@ h1.year {
   .aboutme-container h2 {
     font-size: 18px;
     line-height: 1.4;
+  }
+
+  .experience-item p {
+    font-size: 12px;
   }
 
   .experiences {
@@ -414,9 +419,8 @@ h1.year {
     transform: translateY(50px);
   }
 
-  .year {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+  h1.year {
+    font-size: 21px;
   }
 
   .mypic {
@@ -427,5 +431,14 @@ h1.year {
 
   .tech-container h1 {
     margin-top: 40px;
+    font-size: 1.6rem;
+  }
+
+  .experiences #ex-header {
+    font-size: 1.6rem;
+  }
+
+  #i {
+    font-size: 2rem;
   }
 }

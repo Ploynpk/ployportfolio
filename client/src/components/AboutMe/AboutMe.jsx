@@ -142,7 +142,7 @@ function AboutMe() {
           <div className="experience-item">
             <div>
               <h1>Software Engineer</h1>
-              <p>Petder Better</p>
+              <p>Open Source | Petder Better</p>
             </div>
             <h1 className="year">2024</h1>
           </div>
@@ -150,7 +150,7 @@ function AboutMe() {
           <div className="experience-item">
             <div>
               <h1>Software Engineer</h1>
-              <p>LunchBox</p>
+              <p>Open Source | LunchBox</p>
             </div>
             <h1 className="year">2024</h1>
           </div>

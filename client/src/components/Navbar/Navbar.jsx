@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
 import linkedinIcon from '../../assets/images/lnl.png';
 import githubIcon from '../../assets/images/github.png';
@@ -9,11 +9,25 @@ import resume from '../../assets/images/PloynapaYang(Resume)-2025.pdf';
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState('');
+  const [isVisible, setIsVisible] = useState(true); // state for navbar visibility
+  const timeoutRef = useRef(null); // store timeout in useRef to preserve it
 
   // detect current section , dynamic navbar active
   useEffect(() => {
-    // function to handle scroll
     const handleScroll = () => {
+      // Hide navbar immediately when scrolling
+      setIsVisible(false);
+
+      // Clear the previous timeout
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      // Set timeout to show navbar after scrolling stops
+      timeoutRef.current = setTimeout(() => {
+        setIsVisible(true); // Show navbar after scrolling stops
+      }, 500); // 0.5 seconds of idle time to detect scrolling stop
+
       // initialize all the navbar menu
       const sections = ['home', 'about', 'projects', 'ploybot'];
       let currentSection = '';
@@ -32,17 +46,20 @@ function Navbar() {
       setActiveLink(currentSection);
     };
 
-    // add event
+    // add event listener
     window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    // remove event out
+    handleScroll(); // run it once for initial section detection
+
+    // remove event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
   return (
     <nav className="navbar">
+      
       {/* Left Navbar */}
       <div className="navbar-right">
         <p>
@@ -67,7 +84,7 @@ function Navbar() {
       </div>
 
       {/* Middle Logo */}
-      <div className="navbar-mid">
+      <div className={`navbar-mid ${!isVisible ? 'hidden' : ''}`}>
         <a
           href="#home"
           className="tooltip-container"
@@ -78,13 +95,12 @@ function Navbar() {
               .scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          {' '}
           <img src={logo} alt="Logo" style={{ borderRadius: '50%' }} />
         </a>
       </div>
 
-      {/* Right Navbar */}
-      <div className="navbar-left">
+      {/* Right Navbar (Visible at all times) */}
+      <div className={`navbar-left ${!isVisible ? 'hidden' : ''}`}>
         <a
           href="https://www.linkedin.com/in/ploynapa-py/"
           target="_blank"
@@ -120,6 +136,7 @@ function Navbar() {
           <span className="tooltip">Contact Me</span>
         </a>
       </div>
+
     </nav>
   );
 }

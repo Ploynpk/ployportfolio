@@ -28,15 +28,15 @@ const projectDetails = {
   PayPro:
     'A group financial management web application specifically designed to manage and track shared expenses.',
   'Petder Better':
-    'A dating web application for pet lovers to connect and find companionship for their pets.',
-  LunchBox: 'A meal prep management app.',
+    'A pet social network and dating web application that helps pet lovers connect with others, offering a platform for finding companionship and potential playmates for their pets.',
+  LunchBox: 'A meal prep management app that integrates with an ingredient API, allowing users to plan and organize their meals by accessing ingredient information, nutritional data, and recipe suggestions.',
   DeClustor:
     'A cloud management platform simplifying applications running on AWS ECS by offering a centralized, real-time dashboard for monitoring across multi-account.',
   JigglyDex:
     'A Pokémon dashboard featuring API integration for collecting favorites and enabling random battles.',
   NextFlick:
     'A home cinema platform designed to enhance your movie and TV show experience.',
-  'Lucky Dog': 'An adoption platform for rescue dogs.',
+  'Lucky Dog': 'An adoption platform for rescue dogs, featuring a match system to connect potential pet owners with dogs in need of a home based on preferences and compatibility.',
 };
 
 const projectImages = {

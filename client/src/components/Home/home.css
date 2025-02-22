@@ -121,7 +121,7 @@ a {
 
 .lang h3 {
   padding: 7px 20px;
-  border-radius: 7px;
+  border-radius: 5px;
   box-shadow: 10px 10px 10px 10px rgba(45, 42, 6, 0.171);
   transition: transform 0.2s ease-in-out;
 }
@@ -190,8 +190,9 @@ a {
   }
 
   .resume-contact-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 15px;
   }
 
@@ -231,8 +232,9 @@ a {
   }
 
   .resume-contact-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 15px;
   }
 
@@ -276,8 +278,9 @@ a {
   }
 
   .resume-contact-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 15px;
   }
 
@@ -301,11 +304,11 @@ a {
   }
 
   .intro-top {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .intro-summary {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .resume button {
@@ -318,17 +321,18 @@ a {
   }
 
   .resume-contact-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 15px;
   }
 
   .contact {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .lang h3 {
-    font-size: 12px;
+    font-size: 13px;
     padding: 5px;
   }
 }
