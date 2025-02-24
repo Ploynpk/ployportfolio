@@ -17,7 +17,7 @@ function Chat() {
         AI-powered chat feature is under development. Stay tuned for updates!{' '}
         <br />
         <br />
-        Thanks ☺ ☻
+        Thanks ☻
       </h2>
     </div>
   );

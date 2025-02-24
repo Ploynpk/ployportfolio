@@ -222,6 +222,16 @@
   font-size: 14px;
 }
 
+#github {
+  transition: transform 0.3s ease-in-out;
+}
+
+#github:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 5px 8px #c4dea3;
+
+}
+
 @media (max-width: 1440px) {
   .project-list {
     display: flex;
